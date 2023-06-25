@@ -1,0 +1,57 @@
+{
+    "name": "myadion/laravel-maria-webhooks",
+    "description": "The package facilitates the integration between your Laravel application and Adion's artificial intelligence service, Maria. With this package, your application can react in real-time to events triggered by Maria, offering a high level of automation and interaction. Based on a customizable set of instructions defined in a manual, Maria can trigger a variety of actions in your application by sending webhooks to your server. Whether it's managing client requests or carrying out any other custom action, this is the essential tool for fully leveraging Maria's capabilities.",
+    "type": "library",
+    "homepage": "https://github.com/myadion/laravel-maria-webhooks",
+    "keywords": [
+        "adion",
+        "maria",
+        "laravel-maria-webhooks"
+    ],
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Adion",
+            "email": "hello@myadion.com",
+            "homepage": "https://myadion.com"            
+        },
+        {
+            "name": "Kévin Paly",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0",
+        "myadion/laravel-webhook-client": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0|^7.0|^8.0",
+        "phpunit/phpunit": "^9.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Adion\\MariaWebhooks\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Adion\\MariaWebhooks\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Adion\\MariaWebhooks\\MariaWebhooksServiceProvider"
+            ]
+        }
+    }
+}
